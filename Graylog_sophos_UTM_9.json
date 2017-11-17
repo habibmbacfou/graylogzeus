@@ -1,0 +1,986 @@
+{
+  "extractors": [
+    {
+      "title": "id firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_id",
+      "extractor_config": {
+        "regex_value": "id=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "sys firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_sys",
+      "extractor_config": {
+        "regex_value": "sys=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "severity firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_severity",
+      "extractor_config": {
+        "regex_value": "severity=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "action firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_action",
+      "extractor_config": {
+        "regex_value": "action=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "sub firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_sub",
+      "extractor_config": {
+        "regex_value": "sub=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "initf firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_initf",
+      "extractor_config": {
+        "regex_value": "initf=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "fwrule firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_fwrule",
+      "extractor_config": {
+        "regex_value": "fwrule=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "srcmac firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_srcmac",
+      "extractor_config": {
+        "regex_value": "srcmac=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "dstmac firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dstmac",
+      "extractor_config": {
+        "regex_value": "dstmac=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "outitf firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_outitf",
+      "extractor_config": {
+        "regex_value": "outitf=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "proto firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_proto",
+      "extractor_config": {
+        "regex_value": "proto=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "srcip firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_srcip",
+      "extractor_config": {
+        "regex_value": "srcip=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "srcport firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_srcport",
+      "extractor_config": {
+        "regex_value": "srcport=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "tos firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_tos",
+      "extractor_config": {
+        "regex_value": "tos=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "dstip firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dstip",
+      "extractor_config": {
+        "regex_value": "dstip=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "prec firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_prec",
+      "extractor_config": {
+        "regex_value": "prec=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "dstport firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dstport",
+      "extractor_config": {
+        "regex_value": "dstport=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "tcpflags firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_tcpflags",
+      "extractor_config": {
+        "regex_value": "tcpflags=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "variant firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_variant",
+      "extractor_config": {
+        "regex_value": "variant=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "username firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_username",
+      "extractor_config": {
+        "regex_value": "username=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "event firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_event",
+      "extractor_config": {
+        "regex_value": "event=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "virtual_ip firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_virtual_ip",
+      "extractor_config": {
+        "regex_value": "virtual_ip=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "ssid_id firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_ssid_id",
+      "extractor_config": {
+        "regex_value": "ssid_id=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "status_code firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_status_code",
+      "extractor_config": {
+        "regex_value": "status_code=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "bssid firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_bssid",
+      "extractor_config": {
+        "regex_value": "bssid=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "ssid firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_ssid",
+      "extractor_config": {
+        "regex_value": "ssid=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "sta firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_sta",
+      "extractor_config": {
+        "regex_value": "sta=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": " sta="
+    },
+    {
+      "title": "name firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_name",
+      "extractor_config": {
+        "regex_value": "name=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": " name="
+    },
+    {
+      "title": "queueid_mail firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_queueid_mail",
+      "extractor_config": {
+        "regex_value": "queueid=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "from_mail firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_from",
+      "extractor_config": {
+        "regex_value": "from=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "subject_mail firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_subject_mail",
+      "extractor_config": {
+        "regex_value": "subject=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "to_mail firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_to_mail",
+      "extractor_config": {
+        "regex_value": "to=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": " to=\""
+    },
+    {
+      "title": "size_mail firewall extractor",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_size_mail",
+      "extractor_config": {
+        "regex_value": "size=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": " size=\""
+    },
+    {
+      "title": "length firewall extractor",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_length",
+      "extractor_config": {
+        "regex_value": "length=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": " length="
+    },
+    {
+      "title": "ttl firewall extractor",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_ttl",
+      "extractor_config": {
+        "regex_value": "ttl=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": " ttl=\""
+    },
+    {
+      "title": "auth firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_auth",
+      "extractor_config": {
+        "regex_value": "auth=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "ad_domain firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_ad_domain",
+      "extractor_config": {
+        "regex_value": "ad_domain=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "app-id firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_app-id",
+      "extractor_config": {
+        "regex_value": "app-id=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "application firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_application",
+      "extractor_config": {
+        "regex_value": "application=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "info firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_info",
+      "extractor_config": {
+        "regex_value": "info=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "authtime firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_authtime",
+      "extractor_config": {
+        "regex_value": "authtime=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "categoryname firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_categoryname",
+      "extractor_config": {
+        "regex_value": "categoryname=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "avscantime firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_avscantime",
+      "extractor_config": {
+        "regex_value": "avscantime=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "device firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_device",
+      "extractor_config": {
+        "regex_value": "device=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "cached firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_cached",
+      "extractor_config": {
+        "regex_value": "cached=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "cattime firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_cattime",
+      "extractor_config": {
+        "regex_value": "cattime=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "category firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_category",
+      "extractor_config": {
+        "regex_value": "category=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "filename firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_filename",
+      "extractor_config": {
+        "regex_value": "filename=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "filteraction firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_filteraction",
+      "extractor_config": {
+        "regex_value": "filteraction=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "error firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_error",
+      "extractor_config": {
+        "regex_value": "error=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "dnstime firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dnstime",
+      "extractor_config": {
+        "regex_value": "dnstime=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "exceptions firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_exceptions",
+      "extractor_config": {
+        "regex_value": "exceptions=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "extension firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_extension",
+      "extractor_config": {
+        "regex_value": "extension=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "group firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_group",
+      "extractor_config": {
+        "regex_value": "group=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "fullreqtime firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_fullreqtime",
+      "extractor_config": {
+        "regex_value": "fullreqtime=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "method firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_method",
+      "extractor_config": {
+        "regex_value": "method=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "reason firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_reason",
+      "extractor_config": {
+        "regex_value": "reason=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "profile firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_profile",
+      "extractor_config": {
+        "regex_value": "profile=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "reputation firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_reputation",
+      "extractor_config": {
+        "regex_value": "reputation=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "referer firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_referer",
+      "extractor_config": {
+        "regex_value": "referer=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "request firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_request",
+      "extractor_config": {
+        "regex_value": "request=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "ua firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_ua",
+      "extractor_config": {
+        "regex_value": "ua=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "statuscode firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_statuscode",
+      "extractor_config": {
+        "regex_value": "statuscode=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "user firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_user",
+      "extractor_config": {
+        "regex_value": "user=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "url firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_url",
+      "extractor_config": {
+        "regex_value": "url=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "line firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_line",
+      "extractor_config": {
+        "regex_value": "line=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "file firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_file",
+      "extractor_config": {
+        "regex_value": "file=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "function firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_function",
+      "extractor_config": {
+        "regex_value": "function=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "message firewall extractor",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_message",
+      "extractor_config": {
+        "regex_value": "message=\"([^\"]*)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.3.1"
+}
